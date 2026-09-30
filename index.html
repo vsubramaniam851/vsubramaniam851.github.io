@@ -25,7 +25,7 @@
                 </p>
                 <p>I am a third year MIT EECS PhD student at <a href="https://www.csail.mit.edu/">CSAIL</a> advised by <a href="https://people.csail.mit.edu/boris/boris.html">Boris Katz</a> in the MIT <a href="https://groups.csail.mit.edu/infolab/">Infolab</a>. I also work closely with <a href="https://briancheung.github.io/">Brian Cheung</a> and previously worked with <a href="https://0xab.com/">Andrei Barbu</a>.     
                 </p>
-                <p>I was recently a student researcher at Google working on the <a href="https://research.google/teams/cloud-ai-research/">Cloud AI Research</a> team with <a href="https://people.csail.mit.edu/yalesong/home/">Yale Song</a> and <a href="https://chunliangli.github.io/">Chun-Liang Li</a>. 
+                <p>I was recently a student researcher at Google working on the Cloud AI Research team with <a href="https://people.csail.mit.edu/yalesong/home/">Yale Song</a> and <a href="https://chunliangli.github.io/">Chun-Liang Li</a>. 
                 </p>
                 <p>
                   Before my PhD, I obtained my bachelors (2023) and MEng (2024) in Computer Science at MIT. During this time, I was a research assistant in the Infolab specifically working on problems in deep learning, multimodal processing, and computational neuroscience. During my MEng, I also had the opportunity to work on research with <a href="https://people.csail.mit.edu/lishuang/">Shuang Li</a>, <a href="https://yilundu.github.io/">Yilun Du</a>, <a href="https://scholar.google.com/citations?user=Vzr1RukAAAAJ&hl=en">Igor Mordatch</a>, and <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a> on problems related to generative modeling. I am extremely fortunate to be supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a> as well as the Robert J Shillman (1974) Fund Fellowship.
@@ -78,6 +78,60 @@
 
         <tr>
           <td style="padding:20px; width:40%; vertical-align:middle;">  <!-- Adjusted width for better image display -->
+            <img src='images/previewdiff_image.png' class="research-image" alt="Optimization Prior Diagram">
+          </td>
+          <td style="padding:20px; width:60%; vertical-align:middle;">  <!-- Adjusted width for more text space -->
+            <a href="https://arxiv.org/abs/2609.36199">
+              <strong><span style="color: red;">**NEW**</span> PreviewDiff: Multimodal Critic-Guided Search over Diffusion Latents  </strong>
+            </a>
+            <br>
+            <strong>Vighnesh Subramaniam</strong>,
+            <a href="https://people.csail.mit.edu/boris/boris.html">Boris Katz</a>,
+            <a href="https://briancheung.github.io/">Brian Cheung</a>,
+            <a href="https://chunliangli.github.io/">Chun-Liang Li</a>,
+            <a href="https://tomas.pfister.fi/">Tomas Pfister</a>,
+            <a href="https://people.csail.mit.edu/yalesong/home/">Yale Song</a>
+            <br>
+            <em>Under Review</em>
+            <br>
+            <a href="https://previewdiff.github.io/">Project Page</a> /
+            <a href="https://arxiv.org/abs/2609.36199">arXiv</a>
+            <p> We introduce PreviewDiff, a new test-time scaling method for diffusion models. Our method operates on diffusion latents, 
+              extracting a denoised preview of the image/video that is evaluated by an multimodal LLM judge, applying edits in a tree structure. 
+              Our tree branching operates over edits to the input prompt to the diffusion model, introduced by the MLLM judge. We evaluate our approach
+              across different image and video diffusion models, showing strong test-time scaling trends! Spending more compute on branching with MLLM edits 
+              leads to increasingly strong results. Our analysis also explores components that matter for scaling and improvements across different settings.
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:20px; width:40%; vertical-align:middle;">  <!-- Adjusted width for better image display -->
+            <img src='images/optimization_prior_concept.png' class="research-image" alt="Optimization Prior Diagram">
+          </td>
+          <td style="padding:20px; width:60%; vertical-align:middle;">  <!-- Adjusted width for more text space -->
+            <a href="">
+              <strong><span style="color: red;">**NEW**</span> Transferring Architecture as an Optimization Prior</strong>
+            </a>
+            <br>
+            <strong>Vighnesh Subramaniam</strong>,
+            <a href="https://people.csail.mit.edu/boris/boris.html">Boris Katz</a>,
+            <a href="https://briancheung.github.io/">Brian Cheung</a>
+            <br>
+            <em>Neural Information Processing Systems, 2026</em>
+            <br>
+            <a href="">arXiv</a> (Coming soon!)
+            <p>We introduce representational similarity as an optimization prior. This is an initialization-only procedure that aligns a target network to 
+              the representational geometry of a randomly initialized guide network before any downstream training occurs. Crucially, the guide network 
+              transfers no learned knowledge: it is frozen, never sees labels. We demonstrate that this cross-architecture transfer of fate works in two key 
+              domains: from deeper to shallower networks and from fine-grained to coarse-grained networks. Ultimately, this establishes that a model's 
+              architectural destiny can be decoupled from its physical structure and explicitly programmed at initialization.
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:20px; width:40%; vertical-align:middle;">  <!-- Adjusted width for better image display -->
             <img src='images/theseus_diagram.png' class="research-image" alt="Network of Theseus Diagram">
           </td>
           <td style="padding:20px; width:60%; vertical-align:middle;">  <!-- Adjusted width for more text space -->
@@ -91,8 +145,10 @@
             <a href="http://0xab.com/">Andrei Barbu</a>,
             <a href="https://briancheung.github.io/">Brian Cheung</a>
             <br>
-            <em>Under Review</em>
+            <em>Neural Information Processing Systems, 2026</em>
             <br>
+            <em>International Conference on Learning Representations: Workshop on Scientific Methods for Understanding Deep Learning, 2026</em>
+            <br>            
             <a href="https://arxiv.org/abs/2512.04198">arXiv</a>
             <p>We introduce the Network of Theseus (NoT), a method to part-by-part convert between architectures. We show massive conversions where untrained architectures can be used to guide a conversion to a completely new architecture. This leads to some pretty amazing findings on RNNs and MLPs. 
               Furthermore, we find some even more striking results for making larger architectures smaller using untrained teachers!</p>
@@ -151,12 +207,12 @@
             <p>We designed a new self-improvement finetuning method for LLMs that preserves diversity. Our method builds on multiagent prompt frameworks like multiagent debate but finetuning sets of generation and critic models that interact by proposing more accurate solutions and critiquing solutions more accurately. We see pretty considerable improvements across several math-related tasks!</p>
           </td>
         </tr>
-          
+        <!--
         <tr>
-          <td style="padding:20px; width:40%; vertical-align:middle;">  <!-- Adjusted width for better image display -->
+          <td style="padding:20px; width:40%; vertical-align:middle;">  
             <img src='images/new_overview.png' class="research-image" alt="Vision-Language Integration Diagram">
           </td>
-          <td style="padding:20px; width:60%; vertical-align:middle;">  <!-- Adjusted width for more text space -->
+          <td style="padding:20px; width:60%; vertical-align:middle;"> 
             <a href="https://arxiv.org/abs/2406.14481">
               <strong>Revealing Vision-Language Integration in the Brain with Multimodal Networks</strong>
             </a>
@@ -179,6 +235,7 @@
             <p>Multimodal deep networks of vision and language are used to localize sites of vision-language integration in the brain and identify architectural motifs that are most similar to computations in the brain.</p>
           </td>
         </tr>
+      -->
 
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
